@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profil Lengkap - Arul Pramana Bahari</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .profil-container {
+        max-width: 600px;
+        margin: 60px auto;
+        background: rgba(26,26,64,0.7);
+        border-radius: 18px;
+        box-shadow: 0 0 24px #6a00f7, 0 0 48px #00fff7;
+        padding: 32px 24px;
+        color: #fff;
+      }
+      .profil-title {
+        font-size: 2rem;
+        color: #00fff7;
+        margin-bottom: 18px;
+        text-align: center;
+        text-shadow: 0 0 8px #6a00f7;
+      }
+      .profil-list {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 18px;
+      }
+      .profil-list span {
+        color: #6a00f7;
+        font-weight: 600;
+      }
+      .profil-item {
+        opacity: 0;
+        transform: translateX(-40px) scale(0.95);
+        transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55), transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+      }
+      .profil-item.visible {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+      .profil-skills-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 48px 0 0 0;
+        gap: 32px;
+        position: relative;
+        height: 220px;
+      }
+      .profil-skills {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        min-width: 80px;
+      }
+      .profil-skill-icon {
+        opacity: 0;
+        transform: translateY(-80px) scale(0.7) rotate(-60deg);
+        transition: opacity 0.8s cubic-bezier(.68,-0.55,.27,1.55), transform 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+        will-change: transform, opacity;
+      }
+      .profil-skill-icon.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+      }
+      .profil-skill-icon img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 50%;
+        background: transparent;
+        filter: drop-shadow(0 0 8px #00fff7);
+        padding: 8px;
+        box-shadow: 0 0 16px #6a00f7, 0 0 32px #00fff7;
+      }
+      .profil-skills-left .profil-skill-icon {
+        transform: translateX(-80px) translateY(-80px) scale(0.7) rotate(-60deg);
+      }
+      .profil-skills-right .profil-skill-icon {
+        transform: translateX(80px) translateY(-80px) scale(0.7) rotate(60deg);
+      }
+      .profil-skills-left .profil-skill-icon.visible,
+      .profil-skills-right .profil-skill-icon.visible {
+        transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+      }
+      .btn-particles {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        transform: translate(-50%, -50%);
+      }
+      .btn-particle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.8);
+        animation: particle-animation 1.5s infinite;
+      }
+      .bp1 { width: 6px; height: 6px; animation-delay: 0s; }
+      .bp2 { width: 8px; height: 8px; animation-delay: 0.2s; }
+      .bp3 { width: 10px; height: 10px; animation-delay: 0.4s; }
+      .bp4 { width: 12px; height: 12px; animation-delay: 0.6s; }
+
+      @keyframes particle-animation {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-20px, -20px) scale(0); opacity: 0; }
+      }
+      .profil-skills-center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 0 0 120px;
+        margin: 0 16px;
+        z-index: 2;
+      }
+      .profil-center-logo img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 0 0 16px #00fff7, 0 0 32px #6a00f7;
+        animation: spinLogo 2.5s linear infinite;
+        margin: 0 auto;
+        z-index: 2;
+        position: relative;
+      }
+      .profil-skills-bar {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-bottom: 24px;
+        overflow: hidden;
+      }
+      .skills-bar-track {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        animation: skillsBarMove 12s linear infinite;
+      }
+      .skills-bar-icon img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 50%;
+        background: transparent;
+        filter: drop-shadow(0 0 8px #00fff7);
+        box-shadow: 0 0 16px #6a00f7, 0 0 32px #00fff7;
+        margin: 0 8px;
+      }
+      @keyframes skillsBarMove {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    </style>
+</head>
+<body>
+    <div class="profil-container">
+      <div style="width:100%;text-align:center;margin-bottom:24px;">
+        <img src="foto.jpeg" alt="Foto Arul Pramana Bahari" style="width:220px;height:220px;object-fit:cover;border-radius:50%;box-shadow:0 0 24px #00fff7,0 0 48px #6a00f7;border:4px solid #00fff7;" />
+      </div>
+      <div class="profil-title">Profil Lengkap</div>
+      <div class="profil-list">
+        <div class="profil-item"><span>Nama:</span> Arul Pramana Bahari</div>
+        <div class="profil-item"><span>Tempat, Tanggal Lahir:</span> Jember, 11 Januari 2006</div>
+        <div class="profil-item"><span>Alamat:</span> Jember, Jawa Timur</div>
+        <div class="profil-item"><span>Email:</span> arulramana10@gmail.com</div>
+        <div class="profil-item"><span>Telepon:</span> 0821-3192-4311</div>
+        <div class="profil-item"><span>Pendidikan:</span> Mahasiswa Informatika Universitas Jember</div>
+        <div class="profil-item"><span>Skill:</span> Kerja Sama Tim</div>
+        <div class="profil-item"><span>Hobi:</span> Desain , Olahraga (Bulu Tangkis,Renang)</div>
+      </div>
+      <div style="text-align:center;position:relative;display:inline-block;">
+        <a href="index.html" class="btn" style="background:#6a00f7;color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;box-shadow:0 0 8px #00fff7; border:2px solid #fff;">Kembali ke Beranda</a>
+        <span class="btn-particles">
+          <span class="btn-particle bp1"></span>
+          <span class="btn-particle bp2"></span>
+          <span class="btn-particle bp3"></span>
+          <span class="btn-particle bp4"></span>
+        </span>
+      </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // Reveal animasi data diri
+        const items = document.querySelectorAll('.profil-item');
+        items.forEach((item, i) => {
+            setTimeout(() => {
+            item.classList.add('visible');
+          }, 300 + i * 180);
+        });
+
+        // Reveal animasi icon skill dari kanan/kiri
+        const leftIcons = document.querySelectorAll('.profil-skills-left .profil-skill-icon');
+        const rightIcons = document.querySelectorAll('.profil-skills-right .profil-skill-icon');
+        leftIcons.forEach((icon, i) => {
+            setTimeout(() => {
+            icon.classList.add('visible');
+          }, 1200 + i * 250);
+        });
+        rightIcons.forEach((icon, i) => {
+            setTimeout(() => {
+            icon.classList.add('visible');
+          }, 1200 + i * 250);
+        });
+        });
+    </script>
+</body>
+</html>

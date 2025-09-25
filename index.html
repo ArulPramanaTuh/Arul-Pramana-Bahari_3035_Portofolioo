@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Portofolioku</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $(".intro h1").hide().fadeIn(1200);
+        });
+    </script>
+</head>
+<body>
+    <canvas id="particle-bg"></canvas>
+    <div id="cursor-circle"></div>
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">Arul Pramana Bahari</div>
+        <ul class="nav-links">
+        <li><a href="#home" style="color:#fff; border:2px solid #fff; border-radius:8px; padding:4px 16px;">Home</a></li>
+        <!-- <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li> -->
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+    <section id="home" class="section home">
+        <div class="intro">
+                <div class="intro-photo-wrap">
+                    <div class="photo-effect-wrap">
+                        <span class="photo-particles">
+                            <span class="particle p1"></span>
+                            <span class="particle p2"></span>
+                            <span class="particle p3"></span>
+                            <span class="particle p4"></span>
+                            <span class="particle p5"></span>
+                        </span>
+                        <a href="cv.html" target="_blank" title="Lihat CV Arul">
+                            <img src="foto.jpeg" alt="Foto Arul Pramana Bahari" class="intro-photo" style="width:170px;height:170px;margin-bottom:24px;" />
+                        </a>
+                    </div>
+                </div>
+                <h1>Halo <br><span class="name">Namaku Arul Pramana Bahari</span></h1>
+                <p>Mahasiswa Informatika Universitas Jember Angkatan 2024</p>
+
+                <div class="skills-title">Hal-hal yang aku kuasai:</div>
+                <!-- Border bahasa pemrograman yang dikuasai -->
+                <div class="skills-border">
+                    <div class="skill-item">
+                        <a href="https://www.python.org/" target="_blank" title="Python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo" />
+                        </a>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <a href="https://www.pgadmin.org/" target="_blank" title="pgAdmin">
+                            <img src="pg.png" alt="pgAdmin" class="skill-logo" />
+                        </a>
+                        <span>pgAdmin</span>
+                    </div>
+                    <div class="skill-item">
+                        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" title="HTML5">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo" />
+                        </a>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" title="CSS3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo" />
+                        </a>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <a href="https://www.pixellab.us/" target="_blank" title="Pixellab">
+                            <img src="pix.png" alt="Pixellab" class="skill-logo" />
+                        </a>
+                        <span>Pixellab</span>
+                    </div>
+                    <div class="skill-item">
+                        <a href="https://www.capcut.com/id-id/tools/desktop-video-editor?utm_medium=sem&utm_source=googleadwords_int&pid=359289&af_c_id=22906197811&adset_id=190772901344&ad_id=769613073480&placement=&keyword_name=capcut%20com&targetid=kwd-1415464579413&matchtype=p&gad_source=1&gad_campaignid=22906197811&gbraid=0AAAAACROvhlLTw5qPMWnBCYT7bUX_w6r3&gclid=Cj0KCQjwrc7GBhCfARIsAHGcW5XiTZUR1Hq4tBEZF3TcM1q9JVkIBcR2rsZPnuij_EDs_R-KanU4qlYaAvfPEALw_wcB" target="_blank" title="Capcut">
+                            <img src="capcut.png" alt="Capcut" class="skill-logo" />
+                        </a>
+                        <span>Capcut</span>
+                    </div>
+                    <!-- Tambahkan bahasa lain sesuai kebutuhan -->
+                </div>
+                <a href="profil.html" class="btn" target="_blank" style="margin-top:18px;border:2px solid #fff;box-shadow:0 0 8px #00fff7;border-radius:8px;color:#fff;">Profil Lengkap</a>
+                <a href="work.html" class="btn" target="_blank" style="margin-top:10px;border:2px solid #fff;box-shadow:0 0 8px #00fff7;border-radius:8px;color:#fff;">Work</a>
+                <a href="contact.html" class="btn" target="_blank" style="margin-top:10px;border:2px solid #fff;box-shadow:0 0 8px #00fff7;border-radius:8px;color:#fff;">Contact</a>
+        </div>
+    </section>
+
+    <!-- Hamburger menu di pojok kanan atas -->
+<div id="hamburger-menu" style="position:fixed;top:24px;right:32px;z-index:1000;cursor:pointer;width:38px;height:38px;display:flex;align-items:center;justify-content:center;">
+    <div class="bar" style="width:28px;height:4px;background:#fff;border-radius:2px;margin:3px 0;transition:0.3s;"></div>
+    <div class="bar" style="width:28px;height:4px;background:#fff;border-radius:2px;margin:3px 0;transition:0.3s;"></div>
+    <div class="bar" style="width:28px;height:4px;background:#fff;border-radius:2px;margin:3px 0;transition:0.3s;"></div>
+</div>
+<div id="menu-popup" style="position:fixed;top:0;right:0;width:0;height:100vh;background:rgba(18,18,48,0.97);box-shadow:-2px 0 18px #00fff7;z-index:999;overflow:hidden;transition:width 0.4s cubic-bezier(.68,-0.55,.27,1.55);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+  <a href="#home" class="menu-link" style="color:#fff;font-size:1.3rem;margin:18px 0;text-decoration:none;">Home</a>
+  <a href="work.html" class="menu-link" style="color:#fff;font-size:1.3rem;margin:18px 0;text-decoration:none;">Work</a>
+  <a href="contact.html" class="menu-link" style="color:#fff;font-size:1.3rem;margin:18px 0;text-decoration:none;">Contact</a>
+</div>
+<script>
+const hamburger = document.getElementById('hamburger-menu');
+const menuPopup = document.getElementById('menu-popup');
+let menuOpen = false;
+hamburger.onclick = function() {
+  menuOpen = !menuOpen;
+  menuPopup.style.width = menuOpen ? '220px' : '0';
+  // animasi bar
+  const bars = hamburger.querySelectorAll('.bar');
+  if(menuOpen){
+    bars[0].style.transform = 'translateY(7px) rotate(45deg)';
+    bars[1].style.opacity = '0';
+    bars[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+  }else{
+    bars[0].style.transform = 'none';
+    bars[1].style.opacity = '1';
+    bars[2].style.transform = 'none';
+  }
+}
+// Tutup menu jika klik di luar
+window.addEventListener('click',function(e){
+  if(menuOpen && !hamburger.contains(e.target) && !menuPopup.contains(e.target)){
+    menuOpen = false;
+    menuPopup.style.width = '0';
+    const bars = hamburger.querySelectorAll('.bar');
+    bars[0].style.transform = 'none';
+    bars[1].style.opacity = '1';
+    bars[2].style.transform = 'none';
+  }
+});
+</script>
+
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://github.com/ArulPramanaTuh" target="_blank" class="social-icon" title="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+            </a>
+            <a href="https://www.instagram.com/arulprmana11?igsh=MW5yZWIxYnRibW42" target="_blank" class="social-icon" title="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" />
+            </a>
+            <a href="https://linkedin.com/in/username" target="_blank" class="social-icon" title="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://wa.me/6282131924311" target="_blank" class="social-icon" title="WhatsApp">
+                <img src="WhatsApp.svg.webp" alt="WhatsApp" />
+            </a>
+        </div>
+        <p style="color:#fff;">Designed and coded by Arul Pramana Bahari_3035 © 2025</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
